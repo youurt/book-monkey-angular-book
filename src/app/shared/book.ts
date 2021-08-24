@@ -13,3 +13,10 @@ export interface Thumbnail {
   url: string;
   title?: string;
 }
+
+export type ViewState = 'list' | 'details';
+
+// export enum ViewState {
+//   list = 'list',
+//   details = 'details'
+// }
