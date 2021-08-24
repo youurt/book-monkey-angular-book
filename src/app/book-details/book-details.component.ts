@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Book } from '@app/shared/book';
 import { BookStoreService } from '@app/shared/book-store.service';
 import { ActivatedRoute } from '@angular/router';
@@ -13,12 +13,12 @@ export class BookDetailsComponent implements OnInit {
 
   constructor(private bs: BookStoreService, private route: ActivatedRoute) {}
 
-  getRating(num: number) {
+  getRating(num: number): Array<number> {
     return new Array(num);
   }
 
   ngOnInit(): void {
     const params = this.route.snapshot.paramMap;
-    this.book = this.bs.getSingle(params.get('isbn'));
+    this.bs.getSingle(params.get('isbn')).subscribe((b) => (this.book = b));
   }
 }
