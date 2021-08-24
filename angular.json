@@ -24,7 +24,10 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["node_modules/semantic-ui-css/semantic.css"],
+            "styles": [
+              "node_modules/semantic-ui-css/semantic.css",
+              "./src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -82,7 +85,10 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["node_modules/semantic-ui-css/semantic.css"],
+            "styles": [
+              "node_modules/semantic-ui-css/semantic.css",
+              "./src/styles.scss"
+            ],
             "scripts": []
           }
         },
