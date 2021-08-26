@@ -1581,6 +1581,13 @@ alphanum-sort@^1.0.2:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
+angular-date-value-accessor@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/angular-date-value-accessor/-/angular-date-value-accessor-1.2.1.tgz#a5f07b11fef1c0d1fde5aa851057de177c510137"
+  integrity sha512-4lhVi5PRpaIKtsCDEHioue324u1j18t46ZrD/jI7+M6DrZeRyxfMeSGsZXWNOC6eaq9x/pzXyaE8slXSj3Qd5A==
+  dependencies:
+    tslib "^2.0.0"
+
 ansi-colors@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
