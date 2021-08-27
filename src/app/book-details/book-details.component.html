@@ -1,4 +1,4 @@
-<div *ngIf="book; else loading">
+<div *ngIf="book$ | async as book; else loading">
   <h1>{{ book.title }}</h1>
   <h3 *ngIf="book.subtitle">{{ book.subtitle }}</h3>
   <div class="ui divider"></div>
@@ -15,7 +15,7 @@
     </div>
     <div class="four wide column">
       <h4>Erschienen</h4>
-      {{ book.published }}
+      {{ book.published | date: "longDate" }}
     </div>
     <div class="four wide column">
       <h4>Rating</h4>

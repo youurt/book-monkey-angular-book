@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from '@app/shared/book';
 import { BookStoreService } from '@app/shared/book-store.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'bm-book-details',
@@ -10,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BookDetailsComponent implements OnInit {
   book: Book;
+  book$: Observable<Book>;
 
   constructor(
     private bs: BookStoreService,
@@ -19,7 +21,7 @@ export class BookDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const params = this.route.snapshot.paramMap;
-    this.bs.getSingle(params.get('isbn')).subscribe((b) => (this.book = b));
+    this.book$ = this.bs.getSingle(params.get('isbn'));
   }
 
   getRating(num: number): Array<number> {

@@ -97,13 +97,10 @@ export class BookFormComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    // this.initForm();
     if (this.book) {
       this.setFormValues(this.book);
     }
   }
 
-  ngOnInit(): void {
-    // this.initForm();
-  }
+  ngOnInit(): void {}
 }
