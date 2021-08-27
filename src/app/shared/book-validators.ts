@@ -6,24 +6,17 @@ export class BookValidators {
       return null;
     }
 
-    const numbers = control.value.replace(/-/g, '');
-    const isbnPattern = /(^\d{10}$)|(^\d{13}$)/;
-
-    if (isbnPattern.test(numbers)) {
-      return null;
-    } else {
-      return {
-        isbnFormat: { valid: false }
-      };
-    }
+    return /(^\d{10}$)|(^\d{13}$)/.test(control.value.replace(/-/g, ''))
+      ? null
+      : {
+          isbnFormat: { valid: false }
+        };
   }
   static atLeastOneAuthor(controlArray: FormArray): ValidationErrors | null {
-    if (controlArray.controls.some((el) => el.value)) {
-      return null;
-    } else {
-      return {
-        atLeastOneAuthor: { valid: false }
-      };
-    }
+    return controlArray.controls.some((el) => el.value)
+      ? null
+      : {
+          atLeastOneAuthor: { valid: false }
+        };
   }
 }

@@ -29,6 +29,7 @@ export class FormMessagesComponent implements OnInit {
 
   errorsForControl(): string[] {
     const messages = this.allMessages[this.controlName];
+
     if (
       !this.control ||
       !this.control.errors ||
