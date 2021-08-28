@@ -9,18 +9,10 @@ import { AppComponent } from '@app/app.component';
 import { HomeComponent } from '@app/home/home.component';
 import { SearchComponent } from '@app/search/search.component';
 import { TokenInterceptor } from '@app/shared/token.interceptor';
-import { AdminModule } from '@app/admin/admin.module';
-import { BooksModule } from '@app/books/books.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, SearchComponent],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    AdminModule,
-    BooksModule
-  ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
     { provide: LOCALE_ID, useValue: 'de' }

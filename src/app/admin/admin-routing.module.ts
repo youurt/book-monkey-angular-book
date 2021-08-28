@@ -4,9 +4,9 @@ import { CreateBookComponent } from '@app/admin/create-book/create-book.componen
 import { EditBookComponent } from '@app/admin/edit-book/edit-book.component';
 
 const routes: Routes = [
-  { path: 'admin', redirectTo: 'admin/create', pathMatch: 'full' },
-  { path: 'admin/create', component: CreateBookComponent },
-  { path: 'admin/edit/:isbn', component: EditBookComponent }
+  { path: '', redirectTo: 'create', pathMatch: 'full' },
+  { path: 'create', component: CreateBookComponent },
+  { path: 'edit/:isbn', component: EditBookComponent }
 ];
 
 @NgModule({
