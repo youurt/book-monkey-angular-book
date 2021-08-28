@@ -9,8 +9,8 @@ import {
 
 import { Book, Thumbnail } from '@app/shared/book';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { BookExistsValidatorService } from '@app/shared/book-exists-validator.service';
-import { BookValidators } from '@app/shared/book-validators';
+import { BookExistsValidatorService } from '@app/admin/shared/book-exists-validator.service';
+import { BookValidators } from '@app/admin/shared/book-validators';
 
 @Component({
   selector: 'bm-book-form',
