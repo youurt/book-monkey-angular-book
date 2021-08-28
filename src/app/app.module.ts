@@ -18,9 +18,9 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { CreateBookComponent } from './create-book/create-book.component';
 import { FormMessagesComponent } from './form-messages/form-messages.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
-import { IsbnPipe } from './shared/isbn.pipe';
-import { ZoomDirective } from './shared/zoom.directive';
-import { DelayDirective } from './shared/delay.directive';
+import { IsbnPipe } from '@app/shared/isbn.pipe';
+import { ZoomDirective } from '@app/shared/zoom.directive';
+import { DelayDirective } from '@app/shared/delay.directive';
 
 @NgModule({
   declarations: [
